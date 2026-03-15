@@ -1,3 +1,10 @@
+const supabaseUrl = "YOUR_PROJECT_URL"
+const supabaseKey = "YOUR_ANON_PUBLIC_KEY"
+
+const supabase = window.supabase.createClient(
+    supabaseUrl,
+    supabaseKey
+)
 const navbarElement=document.querySelector(".autoHideNavbarMain")
 
 if(document.body.classList.contains("homePage")){
