@@ -4,7 +4,11 @@ body{
 }
 
 /* NAVBAR */
-
+.loginPage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 .autoHideNavbarMain{
     position:fixed;
     top:0;
@@ -18,16 +22,12 @@ body{
     z-index:999;
 }
 
-/* INNER NAVBAR */
-
 .autoHideNavbarInner{
     width:90%;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
-
-/* LOGO */
 
 .navbarBrandLogoArea{
     font-size:22px;
@@ -36,14 +36,10 @@ body{
     cursor:pointer;
 }
 
-/* RIGHT MENU */
-
 .navbarRightMenuArea{
     display:flex;
     gap:25px;
 }
-
-/* NAVBAR BUTTONS */
 
 .navbarRightMenuArea button{
     background:transparent;
@@ -88,31 +84,67 @@ body{
     gap:20px;
 }
 
-/* LOGIN BUTTONS */
+/* BUTTON BASE */
 
 .homepageGoogleLoginButton,
 .homepageLoginSubmitButton{
-    background:#5A189A;
-    color:white;
-    border:none;
-    padding:12px 30px;
+    padding:12px 20px;
     font-size:15px;
     border-radius:6px;
     cursor:pointer;
+    border:none;
     transition:0.2s;
 }
 
+/* GOOGLE BUTTON */
+
 .homepageGoogleLoginButton{
     width:320px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:white;
+    color:#444;
+    border:1px solid #ddd;
 }
+
+/* LOGIN BUTTON */
 
 .homepageLoginSubmitButton{
     width:100%;
+    background:#5A189A;
+    color:white;
 }
 
-.homepageGoogleLoginButton:hover,
 .homepageLoginSubmitButton:hover{
     background:#6A1FB3;
+}
+
+.googleIcon{
+    width:18px;
+    height:18px;
+}
+
+/* DIVIDER */
+
+.loginDividerLine{
+    display:flex;
+    align-items:center;
+    width:280px;
+    color:#999;
+    font-size:12px;
+}
+
+.loginDividerLine::before,
+.loginDividerLine::after{
+    content:"";
+    flex:1;
+    border-bottom:1px solid #ddd;
+}
+
+.loginDividerLine span{
+    margin:0 10px;
 }
 
 /* LOGIN BOX */
@@ -145,4 +177,134 @@ body{
     color:#5A189A;
     cursor:pointer;
     text-align:center;
+}
+
+
+
+
+
+/* TASK MANAGER */
+
+.taskManagerMainContainer{
+    width:400px;
+    margin:30px auto;
+}
+
+.taskInputSection{
+    display:flex;
+    gap:10px;
+}
+
+.taskNameInputField{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.taskAddButton{
+    background:#5A189A;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.taskListContainer{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.taskItemCard{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:10px;
+    border-radius:6px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.taskActionButtons{
+    display:flex;
+    gap:8px;
+}
+
+.taskEditButton,
+.taskDeleteButton{
+    border:none;
+    padding:5px 8px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.taskEditButton{
+    background:#5A189A;
+    color: #ffffff;
+}
+
+.taskDeleteButton{
+    background:black;
+    color:white;
+}
+
+.taskToggleButton{
+    padding:6px 12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    cursor:pointer;
+}
+
+.doneState{
+    background:#4CAF50;
+    color:white;
+    border:none;
+}
+
+.notDoneState{
+    background:white;
+    color:#333;
+}
+
+.weekPreview{
+    display:flex;
+    gap:6px;
+    margin-top:8px;
+}
+
+.dayBox{
+    width:16px;
+    height:16px;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+
+.dayDone{
+    background:#4CAF50;
+}
+
+.taskDurationInputField::-webkit-outer-spin-button,
+.taskDurationInputField::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.taskDurationInputField{
+    appearance: textfield;
+}
+
+.taskToggleButton{
+    background:#ddd;
+    border:none;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.doneState{
+    background:#4CAF50;
+    color:white;
 }

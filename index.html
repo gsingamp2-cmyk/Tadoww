@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Consistency Tracker</title>
     <link rel="stylesheet" href="index.css">
-  </head>
+</head>
 
-  <body class="loginPage">
+<body class="loginPage">
 
-    <!-- NAVBAR -->
-    <nav class="autoHideNavbarMain">
-      <div class="autoHideNavbarInner">
+<nav class="autoHideNavbarMain">
+    <div class="autoHideNavbarInner">
 
         <div class="navbarBrandLogoArea">
-          Consistify
+            Consistify
         </div>
 
         <div class="navbarRightMenuArea">
-          <button class="navbarMenuButtonHome">Home</button>
-          <button class="navbarMenuButtonAbout">About</button>
-          <button class="navbarMenuButtonFaq">FAQs</button>
-          <button class="navbarMenuButtonLogin">Login</button>
+            <button class="navbarMenuButtonHome">Home</button>
+            <button class="navbarMenuButtonAbout">About</button>
+            <button class="navbarMenuButtonFaq">FAQs</button>
+            <button class="navbarMenuButtonLogin">Login</button>
         </div>
 
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- PAGE CONTENT -->
-    <div class="homepageContentContainer">
+<div class="homepageContentContainer">
 
-      <h1 class="homepageHeadingMain">
+    <h1 class="homepageHeadingMain">
         Track Your Consistency
-      </h1>
+    </h1>
 
-      <p class="homepageSubtitleText">
+    <p class="homepageSubtitleText">
         Build habits. Stay consistent. Visualize your growth.
-      </p>
+    </p>
 
-      <div class="homepageLoginSectionWrapper">
+    <div class="homepageLoginSectionWrapper">
 
         <button class="homepageGoogleLoginButton">
-          Login with Google
+            <img src="https://developers.google.com/identity/images/g-logo.png" class="googleIcon">
+            Login with Google
         </button>
+
+        <div class="loginDividerLine">
+            <span>OR</span>
+        </div>
 
         <div class="homepageLoginBoxContainer">
 
-          <input type="text"
-                 placeholder="Username"
-                 class="homepageLoginUsernameInput">
+            <input type="text"
+                   placeholder="Username"
+                   class="homepageLoginUsernameInput">
 
-          <input type="password"
-                 placeholder="Password"
-                 class="homepageLoginPasswordInput">
+            <input type="password"
+                   placeholder="Password"
+                   class="homepageLoginPasswordInput">
 
-          <button class="homepageLoginSubmitButton">
-            Login
-          </button>
+            <button class="homepageLoginSubmitButton">
+                Login
+            </button>
 
-          <p class="homepageForgotPasswordText">
-            Forgot Password?
-          </p>
+            <p class="homepageForgotPasswordText">
+                Forgot Password?
+            </p>
 
         </div>
-      </div>
+
     </div>
 
-    <script src="index.js"></script>
-  </body>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="index.js"></script>
+
+</body>
 </html>
