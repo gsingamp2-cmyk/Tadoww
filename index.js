@@ -1,41 +1,37 @@
 const navbarElement = document.querySelector(".autoHideNavbarMain")
 
-let lastScrollPosition = 0
+if(document.body.classList.contains("homePage")){
 
-/* Hide / Show on scroll */
+    let lastScrollPosition = 0
+    let navbarVisibleState = true
 
-window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", function(){
 
-let currentScroll = window.pageYOffset
+        let currentScrollPosition = window.pageYOffset
 
-if(currentScroll > lastScrollPosition){
+        if(currentScrollPosition > lastScrollPosition){
+            navbarElement.style.top = "-80px"
+            navbarVisibleState = false
+        }else{
+            navbarElement.style.top = "0"
+            navbarVisibleState = true
+        }
 
-navbarElement.style.top = "-80px"
+        lastScrollPosition = currentScrollPosition
 
-}else{
+    })
 
-navbarElement.style.top = "0"
+    document.addEventListener("mousemove", function(event){
 
+        if(event.clientY < 70 && !navbarVisibleState){
+            navbarElement.style.top = "0"
+            navbarVisibleState = true
+        }
+
+        if(event.clientY > 120 && navbarVisibleState){
+            navbarElement.style.top = "-80px"
+            navbarVisibleState = false
+        }
+
+    })
 }
-
-lastScrollPosition = currentScroll
-
-})
-
-
-
-/* Hover reveal when cursor near top */
-
-document.addEventListener("mousemove", function(event){
-
-if(event.clientY < 80){
-
-navbarElement.style.top = "0"
-
-}else{
-
-navbarElement.style.top = "-80px"
-
-}
-
-})

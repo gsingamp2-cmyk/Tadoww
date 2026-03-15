@@ -1,89 +1,148 @@
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* NAVBAR */
 
 .autoHideNavbarMain{
-
-position:fixed;
-top:-80px;
-width:100%;
-height:70px;
-
-background:#5A189A;   /* rich purple */
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-transition:top 0.4s ease;
-
-z-index:999;
-
+    position:fixed;
+    top:0;
+    width:100%;
+    height:70px;
+    background:#5A189A;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:top 0.4s ease;
+    z-index:999;
 }
 
 /* INNER NAVBAR */
 
 .autoHideNavbarInner{
-
-width:90%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 /* LOGO */
 
 .navbarBrandLogoArea{
-
-font-size:22px;
-font-weight:bold;
-color:white;
-
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
 }
 
 /* RIGHT MENU */
 
 .navbarRightMenuArea{
-
-display:flex;
-gap:20px;
-
+    display:flex;
+    gap:25px;
 }
 
-/* BUTTONS */
+/* NAVBAR BUTTONS */
 
 .navbarRightMenuArea button{
+    background:transparent;
+    border:none;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.2s;
+}
 
-background:transparent;
-border:none;
-color:white;
-font-size:15px;
-cursor:pointer;
-
+.navbarRightMenuArea button:hover{
+    color:#E0AAFF;
+    transform:scale(1.05);
 }
 
 /* PAGE CONTENT */
 
 .homepageContentContainer{
-
-margin-top:120px;
-text-align:center;
-
+    margin-top:120px;
+    text-align:center;
+    padding:20px;
 }
 
 .homepageHeadingMain{
-
-font-size:40px;
-
+    font-size:42px;
+    margin-bottom:10px;
 }
 
 .homepageSubtitleText{
+    color:#666;
+    font-size:18px;
+    margin-bottom:30px;
+}
 
-color:#666;
-font-size:18px;
+/* LOGIN SECTION */
 
+.homepageLoginSectionWrapper{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+/* LOGIN BUTTONS */
+
+.homepageGoogleLoginButton,
+.homepageLoginSubmitButton{
+    background:#5A189A;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    font-size:15px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.homepageGoogleLoginButton{
+    width:320px;
+}
+
+.homepageLoginSubmitButton{
+    width:100%;
+}
+
+.homepageGoogleLoginButton:hover,
+.homepageLoginSubmitButton:hover{
+    background:#6A1FB3;
+}
+
+/* LOGIN BOX */
+
+.homepageLoginBoxContainer{
+    width:280px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:25px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* INPUT FIELDS */
+
+.homepageLoginUsernameInput,
+.homepageLoginPasswordInput{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
+}
+
+/* FORGOT PASSWORD */
+
+.homepageForgotPasswordText{
+    font-size:13px;
+    color:#5A189A;
+    cursor:pointer;
+    text-align:center;
 }

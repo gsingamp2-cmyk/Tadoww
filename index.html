@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Consistency Tracker</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Consistency Tracker</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
 
-<link rel="stylesheet" href="index.css">
+  <body class="loginPage">
 
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="autoHideNavbarMain">
-    
-    <div class="autoHideNavbarInner">
+    <!-- NAVBAR -->
+    <nav class="autoHideNavbarMain">
+      <div class="autoHideNavbarInner">
 
         <div class="navbarBrandLogoArea">
-            Consistify
+          Consistify
         </div>
 
         <div class="navbarRightMenuArea">
-
-            <button class="navbarMenuButtonFaq">FAQ</button>
-            <button class="navbarMenuButtonAbout">About</button>
-            <button class="navbarMenuButtonProfile">Profile</button>
-
+          <button class="navbarMenuButtonHome">Home</button>
+          <button class="navbarMenuButtonAbout">About</button>
+          <button class="navbarMenuButtonFaq">FAQs</button>
+          <button class="navbarMenuButtonLogin">Login</button>
         </div>
 
+      </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <div class="homepageContentContainer">
+
+      <h1 class="homepageHeadingMain">
+        Track Your Consistency
+      </h1>
+
+      <p class="homepageSubtitleText">
+        Build habits. Stay consistent. Visualize your growth.
+      </p>
+
+      <div class="homepageLoginSectionWrapper">
+
+        <button class="homepageGoogleLoginButton">
+          Login with Google
+        </button>
+
+        <div class="homepageLoginBoxContainer">
+
+          <input type="text"
+                 placeholder="Username"
+                 class="homepageLoginUsernameInput">
+
+          <input type="password"
+                 placeholder="Password"
+                 class="homepageLoginPasswordInput">
+
+          <button class="homepageLoginSubmitButton">
+            Login
+          </button>
+
+          <p class="homepageForgotPasswordText">
+            Forgot Password?
+          </p>
+
+        </div>
+      </div>
     </div>
 
-</nav>
-
-
-<!-- PAGE CONTENT -->
-<div class="homepageContentContainer">
-
-    <h1 class="homepageHeadingMain">
-        Track Your Consistency
-    </h1>
-
-    <p class="homepageSubtitleText">
-        Build habits. Stay consistent. Visualize your growth.
-    </p>
-
-    <h1>BUild by vishnu and vardhan</h1>
-
-</div>
-
-
-<script src="index.js"></script>
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
