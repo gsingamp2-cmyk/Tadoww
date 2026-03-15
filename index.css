@@ -1,0 +1,89 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+.autoHideNavbarMain{
+
+position:fixed;
+top:-80px;
+width:100%;
+height:70px;
+
+background:#5A189A;   /* rich purple */
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+transition:top 0.4s ease;
+
+z-index:999;
+
+}
+
+/* INNER NAVBAR */
+
+.autoHideNavbarInner{
+
+width:90%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+/* LOGO */
+
+.navbarBrandLogoArea{
+
+font-size:22px;
+font-weight:bold;
+color:white;
+
+}
+
+/* RIGHT MENU */
+
+.navbarRightMenuArea{
+
+display:flex;
+gap:20px;
+
+}
+
+/* BUTTONS */
+
+.navbarRightMenuArea button{
+
+background:transparent;
+border:none;
+color:white;
+font-size:15px;
+cursor:pointer;
+
+}
+
+/* PAGE CONTENT */
+
+.homepageContentContainer{
+
+margin-top:120px;
+text-align:center;
+
+}
+
+.homepageHeadingMain{
+
+font-size:40px;
+
+}
+
+.homepageSubtitleText{
+
+color:#666;
+font-size:18px;
+
+}
