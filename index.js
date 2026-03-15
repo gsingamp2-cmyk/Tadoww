@@ -2,7 +2,7 @@ const supabaseUrl = "https://rcpnjyjggulbrkesgjob.supabase.co"
 
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJjcG5qeWpnZ3VsYnJrZXNnam9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1MzQwOTAsImV4cCI6MjA4OTExMDA5MH0._VZVOXRvhcDQBPCSolB0zJ2MujbQBbtdYhNqbbfpe1A"
 
-const supabase = window.supabase.createClient(
+const supabase = supabase.createClient(
   supabaseUrl,
   supabaseKey
 )
@@ -14,7 +14,7 @@ googleLoginButton.addEventListener("click", async () => {
   await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "http://127.0.0.1:5500/home.html"
+      redirectTo: "https://tadoww.netlify.app/home.html"
     }
   })
 
